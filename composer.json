@@ -2,6 +2,7 @@
     "name": "benjiuriberamos/prueba-tecnica-php",
     "description": "Proyecto técnico en PHP.",
     "require": {
+        "php": ">=8.0.30",
         "phpunit/phpunit": "^9.6"
     },
     "autoload": {
