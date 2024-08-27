@@ -1,20 +1,22 @@
 <?php
 
+use App\DTOs\CreateUserDTO;
 use PHPUnit\Framework\TestCase;
-use App\UseCase\SaveUserUseCase;
-use App\Repository\UserRepository;
+use App\UseCases\SaveUserUseCase;
+use App\Repositories\UserRepository;
 
 class SaveUserUseCaseTest extends TestCase {
 
     public function testUserIsSaved() {
+        $createuserdto = new CreateUserDTO("Nicolas Garcia", "nicolas@gmail.com", "admin");
         $repository = new UserRepository();
         $useCase = new SaveUserUseCase($repository);
 
-        $useCase->execute("Benji Uribe", "benjiuriberamos@gmail.com", "admin");
+        $useCase->execute($createuserdto);
 
-        $savedUser = $repository->findById("benjiuriberamos@gmail.com");
+        $savedUser = $repository->findById("nicolas@gmail.com");
 
         $this->assertNotNull($savedUser);
-        $this->assertEquals("Benji Uribe", $savedUser->getName());
+        $this->assertEquals("Nicolas Garcia", $savedUser->getName());
     }
 }

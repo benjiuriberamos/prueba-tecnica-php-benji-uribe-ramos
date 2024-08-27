@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Repository;
+namespace App\Repositories;
 
-use App\User;
+use App\Entities\User;
+
 
 interface UserRepositoryInterface {
     public function save(User $user);

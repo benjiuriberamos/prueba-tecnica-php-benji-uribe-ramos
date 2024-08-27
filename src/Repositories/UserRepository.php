@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repository;
+namespace App\Repositories;
 
-use App\User;
-use App\Repository\UserRepositoryInterface;
+use App\Entities\User;
+use App\Repositories\UserRepositoryInterface;
 
 class UserRepository implements UserRepositoryInterface {
     private $users = [];

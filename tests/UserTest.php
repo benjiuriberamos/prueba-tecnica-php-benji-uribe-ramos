@@ -1,7 +1,7 @@
 <?php
 
+use App\Entities\User;
 use PHPUnit\Framework\TestCase;
-use App\User;
 
 class UserTest extends TestCase {
 

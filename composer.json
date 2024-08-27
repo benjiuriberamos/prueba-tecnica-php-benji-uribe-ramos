@@ -3,7 +3,8 @@
     "description": "Proyecto técnico en PHP.",
     "require": {
         "php": ">=8.0.30",
-        "phpunit/phpunit": "^9.6"
+        "phpunit/phpunit": "^9.6",
+        "klein/klein": "^2.1"
     },
     "autoload": {
         "psr-4": {

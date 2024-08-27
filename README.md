@@ -15,3 +15,7 @@ Instalar dependencias:
 Tests:
 
 `php composer test`
+
+Levantar proyecto
+
+`php -S localhost:8000`
